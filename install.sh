@@ -56,7 +56,7 @@ function install_sheldon() {
 
     echo -e "\e[36mInstalling ${package_name}...\e[m"
     curl --proto '=https' -fLsS https://rossmacarthur.github.io/install/crate.sh \
-        | bash -s -- --repo rossmacarthur/sheldon --to /usr/local/bin
+        | bash -s -- --repo rossmacarthur/sheldon --to ~/.local/bin
 
     if is_package_installed ${package_name}; then
         echo -e "\e[36mSuccessfully installed ${package_name}.\e[m"
