@@ -1,0 +1,14 @@
+[
+    {
+        "src": "zsh/.zshrc",
+        "dst": ".zshrc"
+    },
+    {
+        "src": "zsh/plugins.toml",
+        "dst": ".config/sheldon/plugins.toml"
+    },
+    {
+        "src": "zsh/.p10k.zsh",
+        "dst": ".p10k.zsh"
+    }
+]
