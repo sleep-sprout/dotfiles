@@ -137,7 +137,9 @@ function generate_links() {
     done
 
     # If there is no change (if backup directory is empty), remove backup directory
-    rm -d "${backup_dir}" 2>/dev/null
+    if [ -d "${backup_dir}" ] && [ -z "$(ls -A "${backup_dir}")" ]; then
+        rmdir "${backup_dir}"
+    fi
 }
 
 function main() {

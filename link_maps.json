@@ -10,5 +10,25 @@
     {
         "src": "zsh/.p10k.zsh",
         "dst": ".p10k.zsh"
+    },
+    {
+        "src": "zsh/rc/completion.zsh",
+        "dst": ".config/zsh/rc/completion.zsh"
+    },
+    {
+        "src": "zsh/rc/misc.zsh",
+        "dst": ".config/zsh/rc/misc.zsh"
+    },
+    {
+        "src": "zsh/rc/prompt.zsh",
+        "dst": ".config/zsh/rc/prompt.zsh"
+    },
+    {
+        "src": "zsh/rc/alias.zsh",
+        "dst": ".config/zsh/rc/alias.zsh"
+    },
+    {
+        "src": "zsh/palette/iceberg.zsh",
+        "dst": ".config/zsh/palette/iceberg.zsh"
     }
 ]

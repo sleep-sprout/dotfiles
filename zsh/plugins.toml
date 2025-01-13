@@ -12,16 +12,55 @@
 
 shell = "zsh"
 
+[templates]
+defer = "{{ hooks?.pre | nl }}{% for file in files %}zsh-defer source \"{{ file }}\"\n{% endfor %}{{ hooks?.post | nl }}"
+
 [plugins]
 
-[plugins.zsh-autosuggestions]
-github = "zsh-users/zsh-autosuggestions"
+# sync load
 
-[plugins.zsh-syntax-highlighting]
-github = "zsh-users/zsh-syntax-highlighting"
+[plugins.zsh-defer]
+github = "romkatv/zsh-defer"
+
+[plugins.rc-misc]
+local = "~/.config/zsh/rc"
+use = ["misc.zsh"]
+
+[plugins.rc-palette]
+local = "~/.config/zsh/palette"
+use = ["iceberg.zsh"]
+
+[plugins.rc-prompt]
+local = "~/.config/zsh/rc"
+use = ["prompt.zsh"]
 
 [plugins.powerlevel10k]
 github = "romkatv/powerlevel10k"
+hooks.post = "source ~/.p10k.zsh"
+
+# defer load
+
+[plugins.zsh-autosuggestions]
+github = "zsh-users/zsh-autosuggestions"
+apply = ["defer"]
+
+[plugins.zsh-syntax-highlighting]
+github = "zsh-users/zsh-syntax-highlighting"
+apply = ["defer"]
+
+[plugins.zsh-abbr]
+github = "olets/zsh-abbr"
+apply = ["defer"]
+
+[plugins.rc-completion]
+local = "~/.config/zsh/rc"
+use = ["completion.zsh"]
+apply = ["defer"]
+
+[plugins.rc-alias]
+local = "~/.config/zsh/rc"
+use = ["alias.zsh"]
+apply = ["defer"]
 
 # For example:
 #
