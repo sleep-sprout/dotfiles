@@ -29,7 +29,7 @@ function install_package() {
     fi
 
     echo -e "\e[36mInstalling ${package_name}...\e[m"
-    apt install -yq ${package_name}
+    sudo apt install -yq ${package_name}
 
     if is_package_installed ${package_name}; then
         echo -e "\e[36mSuccessfully installed ${package_name}.\e[m"
@@ -48,6 +48,8 @@ function install_starship() {
 
 function install_sheldon() {
     local package_name="sheldon"
+
+    export PATH=$HOME/.local/bin:$PATH
 
     if is_package_installed ${package_name}; then
         echo -e "\e[36m${package_name} is already installed.\e[m"
@@ -74,6 +76,8 @@ function setup() {
         echo -e "\e[31mapt package manager is not found. Please install apt.\e[0m"
         return 1
     fi
+
+    sudo apt update
 
     # Install curl
     install_package "curl" || return 1
