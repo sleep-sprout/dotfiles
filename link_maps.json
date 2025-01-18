@@ -28,6 +28,10 @@
         "dst": ".config/zsh/rc/alias.zsh"
     },
     {
+        "src": "zsh/rc/functions.zsh",
+        "dst": ".config/zsh/rc/functions.zsh"
+    },
+    {
         "src": "zsh/palette/iceberg.zsh",
         "dst": ".config/zsh/palette/iceberg.zsh"
     }
