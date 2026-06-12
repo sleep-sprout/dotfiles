@@ -8,6 +8,10 @@
         "dst": ".config/sheldon/plugins.toml"
     },
     {
+        "src": "zsh/direnv.toml",
+        "dst": ".config/direnv/direnv.toml"
+    },
+    {
         "src": "zsh/.p10k.zsh",
         "dst": ".p10k.zsh"
     },
